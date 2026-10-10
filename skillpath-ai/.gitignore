@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+backend/skillpath.db
+.pytest_cache/
+# Node
+node_modules/
+dist/
+# Environment
+.env
+.DS_Store

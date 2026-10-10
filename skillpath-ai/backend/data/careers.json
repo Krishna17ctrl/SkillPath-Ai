@@ -1,0 +1,176 @@
+[
+  {
+    "id": "ml-intern",
+    "name": "Machine Learning Intern",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Machine Learning",
+      "Scikit-learn",
+      "Git"
+    ],
+    "critical_skills": [
+      "Python",
+      "Machine Learning"
+    ],
+    "related_skills": {
+      "Machine Learning": [
+        "Scikit-learn",
+        "NumPy"
+      ],
+      "Scikit-learn": [
+        "Machine Learning"
+      ],
+      "SQL": [
+        "PostgreSQL",
+        "MySQL"
+      ]
+    }
+  },
+  {
+    "id": "data-analyst",
+    "name": "Data Analyst",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "Pandas",
+      "Excel",
+      "Data Visualization",
+      "Statistics",
+      "Power BI"
+    ],
+    "critical_skills": [
+      "SQL",
+      "Statistics"
+    ],
+    "related_skills": {
+      "Power BI": [
+        "Data Visualization"
+      ],
+      "Python": [
+        "Pandas"
+      ]
+    }
+  },
+  {
+    "id": "data-scientist",
+    "name": "Data Scientist Intern",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-learn",
+      "Data Visualization"
+    ],
+    "critical_skills": [
+      "Python",
+      "Statistics",
+      "Machine Learning"
+    ],
+    "related_skills": {
+      "Scikit-learn": [
+        "Machine Learning"
+      ],
+      "Pandas": [
+        "Python"
+      ]
+    }
+  },
+  {
+    "id": "python-dev",
+    "name": "Python Developer Intern",
+    "required_skills": [
+      "Python",
+      "Git",
+      "REST APIs",
+      "FastAPI",
+      "SQL",
+      "Debugging",
+      "Testing"
+    ],
+    "critical_skills": [
+      "Python",
+      "Git"
+    ],
+    "related_skills": {
+      "FastAPI": [
+        "REST APIs"
+      ],
+      "SQL": [
+        "PostgreSQL"
+      ]
+    }
+  },
+  {
+    "id": "ai-engineer",
+    "name": "AI Engineer Intern",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "NumPy",
+      "PyTorch",
+      "Git",
+      "REST APIs"
+    ],
+    "critical_skills": [
+      "Python",
+      "Machine Learning"
+    ],
+    "related_skills": {
+      "PyTorch": [
+        "Deep Learning"
+      ],
+      "NumPy": [
+        "Python"
+      ]
+    }
+  },
+  {
+    "id": "web-dev",
+    "name": "Web Developer Intern",
+    "required_skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "REST APIs"
+    ],
+    "critical_skills": [
+      "HTML",
+      "JavaScript"
+    ],
+    "related_skills": {
+      "React": [
+        "JavaScript"
+      ]
+    }
+  },
+  {
+    "id": "software-dev",
+    "name": "Software Developer Intern",
+    "required_skills": [
+      "Python",
+      "Data Structures",
+      "Algorithms",
+      "Git",
+      "SQL",
+      "Testing"
+    ],
+    "critical_skills": [
+      "Data Structures",
+      "Algorithms"
+    ],
+    "related_skills": {
+      "Python": [
+        "Data Structures"
+      ]
+    }
+  }
+]

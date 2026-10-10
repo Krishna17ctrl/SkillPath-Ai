@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Student Placement Prediction Dashboard",
+    "skills": [
+      "Python",
+      "Pandas",
+      "SQL",
+      "Machine Learning",
+      "Scikit-learn",
+      "Data Visualization"
+    ],
+    "reason": "Combines data cleaning, a baseline model, and a clear dashboard."
+  },
+  {
+    "title": "Internship Tracker API",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "REST APIs",
+      "SQL",
+      "Git",
+      "Testing"
+    ],
+    "reason": "Demonstrates practical backend development and data persistence."
+  },
+  {
+    "title": "Exploratory Data Analysis Portfolio",
+    "skills": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Statistics",
+      "Data Visualization"
+    ],
+    "reason": "Builds evidence of analytical thinking and communication."
+  },
+  {
+    "title": "Resume Skill Matcher",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Scikit-learn",
+      "REST APIs"
+    ],
+    "reason": "Directly demonstrates text processing and matching logic."
+  },
+  {
+    "title": "Responsive Career Portfolio",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Git"
+    ],
+    "reason": "Makes projects and skills easy for a reviewer to evaluate."
+  }
+]

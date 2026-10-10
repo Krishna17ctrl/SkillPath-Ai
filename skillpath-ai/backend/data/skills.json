@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Python",
+    "aliases": [
+      "python3",
+      "python programming"
+    ]
+  },
+  {
+    "name": "Machine Learning",
+    "aliases": [
+      "ml",
+      "machine-learning",
+      "machine learning"
+    ]
+  },
+  {
+    "name": "Scikit-learn",
+    "aliases": [
+      "scikit learn",
+      "sklearn",
+      "scikit-learn"
+    ]
+  },
+  {
+    "name": "NumPy",
+    "aliases": [
+      "numpy"
+    ]
+  },
+  {
+    "name": "Pandas",
+    "aliases": [
+      "pandas"
+    ]
+  },
+  {
+    "name": "SQL",
+    "aliases": [
+      "sql"
+    ]
+  },
+  {
+    "name": "PostgreSQL",
+    "aliases": [
+      "postgres",
+      "postgresql"
+    ]
+  },
+  {
+    "name": "MySQL",
+    "aliases": [
+      "mysql"
+    ]
+  },
+  {
+    "name": "Git",
+    "aliases": [
+      "git",
+      "github",
+      "git/github"
+    ]
+  },
+  {
+    "name": "HTML",
+    "aliases": [
+      "html",
+      "html5"
+    ]
+  },
+  {
+    "name": "CSS",
+    "aliases": [
+      "css",
+      "css3"
+    ]
+  },
+  {
+    "name": "JavaScript",
+    "aliases": [
+      "js",
+      "javascript"
+    ]
+  },
+  {
+    "name": "React",
+    "aliases": [
+      "react.js",
+      "reactjs",
+      "react"
+    ]
+  },
+  {
+    "name": "FastAPI",
+    "aliases": [
+      "fastapi"
+    ]
+  },
+  {
+    "name": "REST APIs",
+    "aliases": [
+      "rest api",
+      "rest apis",
+      "restful api",
+      "api development"
+    ]
+  },
+  {
+    "name": "Statistics",
+    "aliases": [
+      "statistics",
+      "statistical analysis"
+    ]
+  },
+  {
+    "name": "Excel",
+    "aliases": [
+      "excel",
+      "ms excel",
+      "microsoft excel"
+    ]
+  },
+  {
+    "name": "Data Visualization",
+    "aliases": [
+      "data visualization",
+      "data visualisation",
+      "matplotlib",
+      "power bi",
+      "tableau"
+    ]
+  },
+  {
+    "name": "Power BI",
+    "aliases": [
+      "power bi",
+      "powerbi"
+    ]
+  },
+  {
+    "name": "Deep Learning",
+    "aliases": [
+      "deep learning",
+      "dl"
+    ]
+  },
+  {
+    "name": "PyTorch",
+    "aliases": [
+      "pytorch",
+      "torch"
+    ]
+  },
+  {
+    "name": "Data Structures",
+    "aliases": [
+      "data structures",
+      "dsa"
+    ]
+  },
+  {
+    "name": "Algorithms",
+    "aliases": [
+      "algorithms",
+      "algorithm design"
+    ]
+  },
+  {
+    "name": "Debugging",
+    "aliases": [
+      "debugging",
+      "debug"
+    ]
+  },
+  {
+    "name": "Testing",
+    "aliases": [
+      "unit testing",
+      "testing",
+      "pytest"
+    ]
+  },
+  {
+    "name": "Java",
+    "aliases": [
+      "java programming"
+    ]
+  },
+  {
+    "name": "C++",
+    "aliases": [
+      "c++",
+      "cpp"
+    ]
+  },
+  {
+    "name": "Communication",
+    "aliases": [
+      "communication skills",
+      "communication"
+    ]
+  },
+  {
+    "name": "Problem Solving",
+    "aliases": [
+      "problem solving",
+      "problem-solving"
+    ]
+  }
+]

@@ -1,0 +1,244 @@
+[
+  {
+    "id": "opp-001",
+    "role": "Machine Learning Intern",
+    "company": "Northstar Analytics (Demo)",
+    "career_id": "ml-intern",
+    "required_skills": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Machine Learning",
+      "SQL",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Scikit-learn",
+      "Data Visualization"
+    ],
+    "education": [
+      "BCA",
+      "BSc",
+      "BTech",
+      "MCA"
+    ],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/ml-intern",
+    "critical_skills": [
+      "Python",
+      "Machine Learning"
+    ],
+    "description": "Assist with data preparation, baseline models, and model evaluation."
+  },
+  {
+    "id": "opp-002",
+    "role": "Junior Data Analyst Intern",
+    "company": "BlueOak Insights (Demo)",
+    "career_id": "data-analyst",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Pandas",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Power BI",
+      "Python"
+    ],
+    "education": [
+      "BCA",
+      "BCom",
+      "BSc",
+      "BTech"
+    ],
+    "projects_required": false,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/data-analyst",
+    "critical_skills": [
+      "SQL"
+    ],
+    "description": "Prepare reports, validate datasets, and communicate findings."
+  },
+  {
+    "id": "opp-003",
+    "role": "Python Backend Intern",
+    "company": "ByteBridge Labs (Demo)",
+    "career_id": "python-dev",
+    "required_skills": [
+      "Python",
+      "Git",
+      "REST APIs",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "FastAPI",
+      "Testing"
+    ],
+    "education": [
+      "BCA",
+      "BSc",
+      "BTech",
+      "MCA"
+    ],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/python-backend",
+    "critical_skills": [
+      "Python",
+      "Git"
+    ],
+    "description": "Build and test small API endpoints with mentor guidance."
+  },
+  {
+    "id": "opp-004",
+    "role": "AI Engineering Trainee",
+    "company": "ModelWorks Studio (Demo)",
+    "career_id": "ai-engineer",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "NumPy",
+      "Git"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "Deep Learning",
+      "REST APIs"
+    ],
+    "education": [
+      "BCA",
+      "BSc",
+      "BTech",
+      "MCA"
+    ],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/ai-trainee",
+    "critical_skills": [
+      "Python",
+      "Machine Learning"
+    ],
+    "description": "Support experiments and package simple model inference workflows."
+  },
+  {
+    "id": "opp-005",
+    "role": "Frontend Developer Intern",
+    "company": "PixelRoute (Demo)",
+    "career_id": "web-dev",
+    "required_skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git"
+    ],
+    "preferred_skills": [
+      "React",
+      "REST APIs"
+    ],
+    "education": [
+      "BCA",
+      "BSc",
+      "BTech",
+      "MCA"
+    ],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/frontend",
+    "critical_skills": [
+      "HTML",
+      "JavaScript"
+    ],
+    "description": "Implement responsive interfaces and connect them to APIs."
+  },
+  {
+    "id": "opp-006",
+    "role": "Data Science Intern",
+    "company": "SignalSpring (Demo)",
+    "career_id": "data-scientist",
+    "required_skills": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Statistics",
+      "Machine Learning"
+    ],
+    "preferred_skills": [
+      "SQL",
+      "Scikit-learn",
+      "Data Visualization"
+    ],
+    "education": [
+      "BCA",
+      "BSc",
+      "BTech",
+      "MCA"
+    ],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/data-science",
+    "critical_skills": [
+      "Python",
+      "Statistics"
+    ],
+    "description": "Explore datasets, build baseline models, and present results."
+  },
+  {
+    "id": "opp-007",
+    "role": "Software Development Intern",
+    "company": "CedarStack (Demo)",
+    "career_id": "software-dev",
+    "required_skills": [
+      "Python",
+      "Data Structures",
+      "Algorithms",
+      "Git"
+    ],
+    "preferred_skills": [
+      "SQL",
+      "Testing"
+    ],
+    "education": [
+      "BCA",
+      "BSc",
+      "BTech",
+      "MCA"
+    ],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/software-dev",
+    "critical_skills": [
+      "Data Structures",
+      "Algorithms"
+    ],
+    "description": "Solve scoped programming tasks and contribute tested code."
+  },
+  {
+    "id": "opp-008",
+    "role": "BI Reporting Intern",
+    "company": "ClearMetric (Demo)",
+    "career_id": "data-analyst",
+    "required_skills": [
+      "Excel",
+      "SQL",
+      "Data Visualization"
+    ],
+    "preferred_skills": [
+      "Power BI",
+      "Statistics"
+    ],
+    "education": [
+      "BCA",
+      "BCom",
+      "BSc",
+      "BTech"
+    ],
+    "projects_required": false,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/bi-reporting",
+    "critical_skills": [
+      "SQL"
+    ],
+    "description": "Maintain reporting views and create basic dashboards."
+  }
+]
