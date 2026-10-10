@@ -105,7 +105,19 @@ run.bat
 3. **Auto-Compute on Mount:**
    - The dashboard now automatically computes and renders live readiness scores and opportunity matches as soon as the app loads.
 
-4. **17/17 Automated Tests Passing:**
+4. **Multi-Disciplinary Global Career Tracks:**
+   - Expanded far beyond engineering / B.Tech roles to support global opportunities across **Finance, Accounting, UI/UX Design, Product Management, Marketing, HR, Operations, Healthcare, and Cloud/Cybersecurity**.
+   - Added 18+ comprehensive global careers and benchmark roles catering to B.Com, B.A., B.Sc., B.B.A., B.Des, B.Tech, M.B.A., and Self-Taught candidates.
+
+5. **Accredited Course Recommendations & Degree Bridging:**
+   - Integrated curated, accredited online courses from **Coursera, edX, Google, Stanford Online, CFI, and Harvard Online**.
+   - When candidates have non-traditional or diverse degrees, verified credentials and coursework act as a **Degree Bridge** to satisfy baseline qualifications and unlock competitive opportunities.
+
+6. **Candidate Switcher & 1-Click Profile Clearing:**
+   - Added a **"Switch Candidate"** and **"Clear Profile"** feature in both the sticky topbar and header CTA.
+   - Users can now clear everything with one click to evaluate a completely new person from scratch, or toggle between pre-configured multi-disciplinary candidate personas (Sarah Jenkins - Finance, Elena Rostova - Design, Marcus Chen - Product, Amara Okafor - Marketing, Prajwal - AI).
+
+7. **17/17 Automated Tests Passing:**
    - Replaced static file-modification timestamps with UUIDs to guarantee test idempotency across multiple runs.
    - Pytest suite passes 100% across authentication, multi-tenant isolation, CRUD, resume parsing, and career algorithms.
 
