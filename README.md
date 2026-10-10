@@ -1,161 +1,126 @@
-# SkillPath AI — Quickstart & Execution Guide
+# SkillPath AI — Career Readiness & Skill Mapping Platform
 
-SkillPath AI is an intelligent career readiness and skill mapping platform. It analyzes a student's technical competencies against target roles, computes a project-level readiness score, builds an actionable learning path, and recommends matching demo opportunities.
+SkillPath AI evaluates a student's technical proficiencies against target industry careers, computes a project-level readiness benchmark, builds a personalized learning roadmap, and matches the profile against curated internship and job opportunities.
 
 ---
 
-## ⚡ Quick Start (1-Command Launch)
+## 🌐 Single Unified Website Link
 
-From the project root (`skillpath-ai-mvp`), run either of the following scripts in your terminal:
+The application now runs as a **single unified service** where FastAPI serves both the interactive React frontend and all backend REST endpoints under one port.
 
-### Option A: Windows Command Prompt (CMD)
+> ### 👉 **Unified Website Link:** [http://127.0.0.1:8000](http://127.0.0.1:8000) (or [http://localhost:8000](http://localhost:8000))
+> - **Interactive Frontend UI:** [http://127.0.0.1:8000](http://127.0.0.1:8000)
+> - **Interactive API Docs (Swagger UI):** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+> - **Health & Status Check:** [http://127.0.0.1:8000/api/health](http://127.0.0.1:8000/api/health)
+
+No need to open or configure separate URLs for frontend and backend. Everything is unified.
+
+---
+
+## ⚡ 1-Click Execution (Terminal)
+
+From the project root directory (`skillpath-ai-mvp`), run either command:
+
+### Windows Command Prompt (CMD):
 ```cmd
 run.bat
 ```
 
-### Option B: Windows PowerShell
+### Windows PowerShell:
 ```powershell
 .\run.ps1
 ```
-*(If PowerShell restricts script execution, run: `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` first, then run `.\run.ps1`)*
+*(If PowerShell restricts script execution, run: `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` once, then run `.\run.ps1`)*
 
-Both scripts will automatically spawn two terminal windows:
-- **Backend Service:** [http://127.0.0.1:8000](http://127.0.0.1:8000)
-- **Interactive API Docs (Swagger):** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-- **Frontend App:** [http://localhost:5173](http://localhost:5173)
+The script automatically:
+1. Validates or builds the frontend bundle into `skillpath-ai/frontend/dist`.
+2. Starts the backend FastAPI server on port `8000`.
+3. Opens [http://127.0.0.1:8000](http://127.0.0.1:8000) directly in your default browser.
 
 ---
 
 ## 💻 Manual Terminal Execution
 
-If you prefer running services manually or are on macOS/Linux, open two separate terminal windows.
-
-### Terminal 1: Backend (FastAPI)
-
-#### Windows (PowerShell):
+### Run Single Unified Application
 ```powershell
 cd skillpath-ai\backend
-.\.venv\Scripts\Activate.ps1
-# (Optional first time setup: pip install -r requirements.txt)
-python -m uvicorn main:app --reload --port 8000
-```
-*Note: If PowerShell blocks script activation, directly run:*
-```powershell
 .\.venv\Scripts\python.exe -m uvicorn main:app --reload --port 8000
 ```
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-#### Windows (Command Prompt):
-```cmd
-cd skillpath-ai\backend
-.\.venv\Scripts\activate.bat
-python -m uvicorn main:app --reload --port 8000
-```
-
-#### macOS / Linux (Bash / Zsh):
-```bash
-cd skillpath-ai/backend
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python -m uvicorn main:app --reload --port 8000
-```
-
----
-
-### Terminal 2: Frontend (React + Vite + TypeScript)
-
-#### All Platforms:
-```bash
-cd skillpath-ai/frontend
-npm install
+### (Optional) Frontend Independent Development Mode
+If making live edits to React components with instant Hot Module Reloading (Vite):
+```powershell
+cd skillpath-ai\frontend
 npm run dev
 ```
-Access the application at [http://localhost:5173](http://localhost:5173).
+Development proxy will run at [http://localhost:5173](http://localhost:5173) and automatically talk to the backend on port 8000.
 
 ---
 
-## 🧪 Running the Automated Test Suite
+## 🐙 GitHub Repository: Push & Clone Instructions
 
-The test suite validates authentication, user data isolation, resume parsing (text, PDF, DOCX), CRUD operations, and recommendation algorithms.
+### Push this Project to GitHub (Single Repository Link)
 
-### Run All Tests with Pytest:
+1. **Create a new empty repository on GitHub** (e.g. `https://github.com/<YOUR-USERNAME>/skillpath-ai`).
+2. Run these commands from the root folder (`skillpath-ai-mvp`):
+
+```bash
+# 1. Add your remote GitHub repository
+git remote add origin https://github.com/<YOUR-USERNAME>/skillpath-ai.git
+
+# 2. Push all code to GitHub
+git push -u origin main
+```
+
+---
+
+### Clone & Run for Any User / Collaborator
+
+Anyone can clone the entire repository using the single GitHub repository link:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/<YOUR-USERNAME>/skillpath-ai.git
+cd skillpath-ai
+
+# 2. Run immediately (Windows)
+run.bat
+```
+
+---
+
+## 🛠️ Errors Solved & Key Enhancements
+
+1. **Fixed "Run Live Analysis" & Profile Saving:**
+   - **Root Cause:** The frontend invoked `api.saveProfile(clean)` targeting `POST /api/profile`, but the FastAPI backend lacked the `POST /api/profile` endpoint, causing HTTP 404 and halting analysis execution.
+   - **Fix:** Implemented `@app.post("/api/profile")` and `@app.get("/api/profile")` in FastAPI to handle both authenticated and guest/demo profiles.
+   - **Schema Support:** Updated Pydantic's `StudentProfile` in `schemas.py` to accept `experience: list[str]` and added `extra = "ignore"` for robust validation.
+   - **Fuzzy Role Matching:** Upgraded career resolution in `POST /api/career/analyze` to handle case differences, IDs, and partial role names with reliable fallback.
+
+2. **Single Link Architecture:**
+   - Fast-served the built React production bundle directly through FastAPI via `StaticFiles` and SPA fallback routing.
+   - Dynamically configured `API_BASE` in `frontend/src/api.ts` to use same-origin relative endpoints when running on port `8000` and proxying on port `5173`.
+
+3. **Auto-Compute on Mount:**
+   - The dashboard now automatically computes and renders live readiness scores and opportunity matches as soon as the app loads.
+
+4. **17/17 Automated Tests Passing:**
+   - Replaced static file-modification timestamps with UUIDs to guarantee test idempotency across multiple runs.
+   - Pytest suite passes 100% across authentication, multi-tenant isolation, CRUD, resume parsing, and career algorithms.
+
+---
+
+## 🧪 Run Automated Tests
+
 ```powershell
 cd skillpath-ai\backend
 .\.venv\Scripts\python.exe -m pytest tests -v
 ```
 
-### Run Specific Test Modules Directly:
-```powershell
-cd skillpath-ai\backend
-
-# 1. Authentication & multi-user data isolation tests
-.\.venv\Scripts\python.exe tests/test_auth_and_isolation.py
-
-# 2. Student profile & CRUD operation tests
-.\.venv\Scripts\python.exe tests/test_crud_and_profile.py
-
-# 3. Resume text extraction & file upload tests
-.\.venv\Scripts\python.exe tests/test_resume_upload.py
-
-# 4. Recommendation, skill gap & readiness score tests
-.\.venv\Scripts\python.exe tests/test_services.py
-```
-
----
-
-## 🌐 Key URLs & Endpoints
-
-| Resource | URL | Description |
-| :--- | :--- | :--- |
-| **Frontend Application** | [http://localhost:5173](http://localhost:5173) | Interactive student dashboard & career advisor |
-| **Backend API Root** | [http://127.0.0.1:8000](http://127.0.0.1:8000) | FastAPI server root |
-| **API Documentation** | [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) | Swagger UI for exploring and testing endpoints |
-| **Health Check** | [http://127.0.0.1:8000/api/health](http://127.0.0.1:8000/api/health) | Service uptime check |
-
-### Core REST Endpoints
-- `POST /api/auth/register` — Register a new student account
-- `POST /api/auth/login` — Login & receive JWT authentication token
-- `GET /api/profile/me` — Retrieve the authenticated student's profile
-- `POST /api/resume/analyze` — Parse resume text or file (PDF/DOCX/TXT) for skills and projects
-- `GET /api/careers` — List target career paths and required technical competencies
-- `POST /api/career/analyze` — Analyze gap between student profile and target career
-- `POST /api/readiness/calculate` — Compute readiness score & category
-- `POST /api/skillpath/generate` — Generate structured learning milestones
-- `GET /api/opportunities` — Retrieve demo job/internship listings
-- `POST /api/opportunities/match` — Match profile with opportunities (APPLY NOW / PREPARE)
-
----
-
-## 📂 Project Architecture
-
-```text
-skillpath-ai-mvp/
-├── run.bat                         # 1-click launcher for Windows CMD
-├── run.ps1                         # 1-click launcher for Windows PowerShell
-├── README.md                       # Main execution guide
-└── skillpath-ai/
-    ├── backend/
-    │   ├── main.py                 # FastAPI application routes & middleware
-    │   ├── database.py             # SQLite schemas, connection & isolation
-    │   ├── schemas.py              # Pydantic models & validation
-    │   ├── requirements.txt        # Python dependencies (FastAPI, pytest, etc.)
-    │   ├── skillpath.db            # SQLite database file
-    │   ├── services/               # Gap analysis, readiness, resume parsing
-    │   └── tests/                  # 17 automated tests across 4 test suites
-    └── frontend/
-        ├── package.json            # Frontend dependencies
-        ├── vite.config.ts          # Vite build configuration
-        └── src/                    # React UI, components, and state management
-```
-
----
-
-## ❓ Troubleshooting
-
-1. **Port 8000 or 5173 Already in Use:**
-   - Change the port when launching uvicorn: `uvicorn main:app --reload --port 8001`
-   - Or stop the running process using Task Manager or `netstat -ano | findstr :8000`.
-2. **PowerShell Script Execution Policy Error:**
-   - Run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` in your PowerShell window.
-3. **Database Reset:**
-   - If you ever wish to re-initialize sample data, simply remove `skillpath-ai/backend/skillpath.db` and start the backend; it will auto-create and seed clean demo tables on startup.
+All 17 tests will execute and confirm:
+- User registration, login, logout, and bcrypt hashing
+- Multi-user data isolation (User B cannot access or modify User A's data)
+- Skills, projects, and certificates CRUD operations
+- Multi-format resume parsing (PDF, DOCX, TXT)
+- Transparent readiness scoring and prioritized action path synthesis
