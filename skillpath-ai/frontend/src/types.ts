@@ -26,6 +26,10 @@ export type Action = {
   action: string
   why: string
   priority: string
+  course?: string
+  provider?: string
+  course_url?: string
+  degree_bridge?: string
 }
 
 export type Opportunity = {

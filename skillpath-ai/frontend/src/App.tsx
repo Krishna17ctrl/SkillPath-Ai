@@ -3,6 +3,7 @@ import {
   Activity,
   ArrowRight,
   Award,
+  BookOpen,
   BrainCircuit,
   BriefcaseBusiness,
   Building,
@@ -11,6 +12,7 @@ import {
   CheckCircle2,
   ChevronRight,
   CircleAlert,
+  Compass,
   Download,
   Edit3,
   ExternalLink,
@@ -30,6 +32,9 @@ import {
   Target,
   Trash2,
   Upload,
+  UserPlus,
+  Users,
+  UserX,
   Waypoints,
   X,
   Zap
@@ -103,15 +108,229 @@ Certifications:
   }
 }
 
-// Recommended skills lookup for quick one-click additions
+// Clean blank profile for evaluating new candidates
+const blankProfile: Profile = {
+  name: '',
+  education: '',
+  branch: '',
+  semester: '',
+  skills: [],
+  projects: [],
+  experience: [],
+  certifications: [],
+  target_career: 'Financial Analyst',
+  resume_text: '',
+  proficiency: {}
+}
+
+// Multi-disciplinary Global Candidate Personas across all degrees and domains
+const candidatePersonas = [
+  {
+    id: 'blank',
+    badge: 'NEW',
+    icon: '✨',
+    name: 'Blank Candidate (Clean Slate)',
+    degree: 'Any Degree / Non-Degree',
+    target: 'Custom Role',
+    description: 'Completely blank profile to evaluate a new person or custom role from scratch.',
+    profile: blankProfile
+  },
+  {
+    id: 'sarah-finance',
+    badge: 'FINANCE',
+    icon: '💼',
+    name: 'Sarah Jenkins',
+    degree: 'B.Com in Accounting & Finance',
+    target: 'Financial Analyst',
+    description: 'Commerce graduate with financial modeling, valuation, and balance sheet reconciliation proficiencies.',
+    profile: {
+      name: 'Sarah Jenkins',
+      education: 'Bachelor of Commerce (B.Com) in Accounting & Finance',
+      branch: 'Financial Accounting & Corporate Banking',
+      semester: 'Recent Graduate / Entry Level',
+      skills: ['Financial Modeling', 'Excel', 'Accounting', 'Financial Statement Analysis', 'Valuation', 'Budgeting', 'Power BI'],
+      projects: [
+        'Corporate Valuation & M&A Model: Constructed a dynamic 3-statement forecast with DCF and sensitivity analysis in Excel; projected cash flows across a 5-year acquisition horizon.',
+        'Working Capital & Budgeting Portal: Designed departmental OpEx tracking sheets and variance analysis dashboards in Power BI.'
+      ],
+      experience: [
+        'Financial Analyst Intern at Apex Capital Advisory (Jun 2023 – Dec 2023): Audited balance sheet reconciliations, evaluated cost variances, and built client pitch deck models.'
+      ],
+      certifications: [
+        'Financial Modeling & Valuation Analyst (FMVA) — Corporate Finance Institute (2024)',
+        'Microsoft Certified: Power BI Data Analyst Associate (PL-300, 2023)'
+      ],
+      target_career: 'Financial Analyst',
+      resume_text: `Sarah Jenkins | B.Com in Accounting & Finance.
+Skills: Financial Modeling, Excel, Accounting, Financial Statement Analysis, Valuation, Budgeting, Power BI.
+Projects: Corporate Valuation & M&A Model, Working Capital & Budgeting Portal.
+Certifications: FMVA (Corporate Finance Institute), Power BI Data Analyst (PL-300).`,
+      proficiency: {
+        'Financial Modeling': 5,
+        'Excel': 5,
+        'Accounting': 4,
+        'Financial Statement Analysis': 4,
+        'Valuation': 4,
+        'Budgeting': 3,
+        'Power BI': 4
+      }
+    }
+  },
+  {
+    id: 'elena-design',
+    badge: 'DESIGN',
+    icon: '🎨',
+    name: 'Elena Rostova',
+    degree: 'B.Des in Visual Design / Self-Taught',
+    target: 'UI/UX Product Designer',
+    description: 'Design specialist with Figma systems, user journey mapping, and interactive prototyping.',
+    profile: {
+      name: 'Elena Rostova',
+      education: 'Bachelor of Design (B.Des) in Visual Communication',
+      branch: 'UI/UX & Human-Centered Interaction Design',
+      semester: 'Final Year',
+      skills: ['Figma', 'Wireframing', 'User Research', 'Prototyping', 'Design Systems', 'Usability Testing', 'Visual Design'],
+      projects: [
+        'Fintech Mobile Banking App: Designed end-to-end design system with 80+ auto-layout components in Figma; tested interactive prototypes with 16 users achieving 92% task completion.',
+        'Accessible Patient Telehealth Portal: Designed WCAG AAA compliant web wireframes and usability benchmark reports.'
+      ],
+      experience: [
+        'Product Design Apprentice at Studio Apex (May 2023 – Nov 2023): Built Figma component libraries and assisted senior designers with client usability testing.'
+      ],
+      certifications: [
+        'Google UX Design Professional Certificate — Coursera (2024)',
+        'Interaction Design Specialist — Interaction Design Foundation (2023)'
+      ],
+      target_career: 'UI/UX Product Designer',
+      resume_text: `Elena Rostova | B.Des in Visual Communication.
+Skills: Figma, Wireframing, User Research, Prototyping, Design Systems, Usability Testing, Visual Design.
+Projects: Fintech Mobile Banking App, Accessible Patient Telehealth Portal.
+Certifications: Google UX Design Professional Certificate.`,
+      proficiency: {
+        'Figma': 5,
+        'Wireframing': 5,
+        'Prototyping': 5,
+        'User Research': 4,
+        'Design Systems': 4,
+        'Usability Testing': 4,
+        'Visual Design': 4
+      }
+    }
+  },
+  {
+    id: 'marcus-product',
+    badge: 'PRODUCT',
+    icon: '🚀',
+    name: 'Marcus Chen',
+    degree: 'B.B.A. in Management',
+    target: 'Product Manager',
+    description: 'Business graduate with Agile sprint facilitation, product roadmapping, and user story mapping.',
+    profile: {
+      name: 'Marcus Chen',
+      education: 'Bachelor of Business Administration (B.B.A.) in Technology Management',
+      branch: 'Product Operations & Strategic Management',
+      semester: 'Recent Graduate',
+      skills: ['Agile/Scrum', 'Product Strategy', 'User Story Mapping', 'Market Research', 'KPI Tracking', 'Stakeholder Management', 'Jira'],
+      projects: [
+        'SaaS Onboarding Flow Optimization: Formulated hypothesis-driven experiment redesigning signup funnel, reducing drop-off by 22% using analytics cohort data.',
+        'Competitive Landscape & TAM Report: Researched 12 direct competitors to formulate Go-To-Market roadmap for AI productivity tool.'
+      ],
+      experience: [
+        'Associate Product Management Intern at CloudPulse (Jan 2024 – Jun 2024): Coordinated sprint backlogs in Jira, authored 45 user stories, and led cross-functional standups.'
+      ],
+      certifications: [
+        'Professional Scrum Product Owner (PSPO I) — Scrum.org (2024)',
+        'Digital Product Management: Modern Fundamentals — Univ. of Virginia (Coursera, 2023)'
+      ],
+      target_career: 'Product Manager',
+      resume_text: `Marcus Chen | B.B.A. in Technology Management.
+Skills: Agile/Scrum, Product Strategy, User Story Mapping, Market Research, KPI Tracking, Stakeholder Management, Jira.
+Projects: SaaS Onboarding Flow Optimization, Competitive Landscape & TAM Report.
+Certifications: PSPO I (Scrum.org), Digital Product Management.`,
+      proficiency: {
+        'Product Strategy': 4,
+        'Agile/Scrum': 5,
+        'User Story Mapping': 4,
+        'Stakeholder Management': 4,
+        'Jira': 5,
+        'KPI Tracking': 4,
+        'Market Research': 4
+      }
+    }
+  },
+  {
+    id: 'amara-marketing',
+    badge: 'MARKETING',
+    icon: '📈',
+    name: 'Amara Okafor',
+    degree: 'B.A. in Media & Communications',
+    target: 'Digital Marketing Strategist',
+    description: 'Arts graduate with SEO audit execution, GA4 analytics conversion, and content growth strategy.',
+    profile: {
+      name: 'Amara Okafor',
+      education: 'Bachelor of Arts (B.A.) in Media & Mass Communication',
+      branch: 'Digital Media & Strategic Communications',
+      semester: 'Final Year',
+      skills: ['SEO', 'Google Analytics', 'Content Strategy', 'Performance Marketing', 'Social Media Marketing', 'Copywriting', 'Email Marketing'],
+      projects: [
+        'Organic Search Growth Campaign: Conducted technical SEO audits, keyword gap analysis, and content clusters increasing blog traffic by 140%.',
+        'Direct-to-Consumer Retention Funnel: Designed Klaviyo automated email flows generating 28% open rate and measurable sales conversions.'
+      ],
+      experience: [
+        'Digital Marketing Coordinator at BrandScale Agency (Jun 2023 – Dec 2023): Managed Meta Ads campaigns and compiled weekly Google Analytics 4 performance attribution.'
+      ],
+      certifications: [
+        'Google Analytics 4 (GA4) Certification — Google Skillshop (2024)',
+        'Inbound Marketing Certified — HubSpot Academy (2023)'
+      ],
+      target_career: 'Digital Marketing Strategist',
+      resume_text: `Amara Okafor | B.A. in Media & Mass Communication.
+Skills: SEO, Google Analytics, Content Strategy, Performance Marketing, Social Media Marketing, Copywriting, Email Marketing.
+Projects: Organic Search Growth Campaign, D2C Retention Funnel.
+Certifications: Google Analytics 4 (GA4), HubSpot Inbound Marketing.`,
+      proficiency: {
+        'SEO': 5,
+        'Google Analytics': 5,
+        'Content Strategy': 4,
+        'Social Media Marketing': 4,
+        'Copywriting': 4,
+        'Email Marketing': 4
+      }
+    }
+  },
+  {
+    id: 'prajwal-ml',
+    badge: 'AI & TECH',
+    icon: '🤖',
+    name: 'Prajwal S. Kumar',
+    degree: 'B.Tech in Computer Science / AIML',
+    target: 'Machine Learning Intern',
+    description: 'Engineering undergraduate with predictive modeling, vector extraction, and Python data pipelines.',
+    profile: demoProfile
+  }
+]
+
+// Comprehensive recommended skills lookup across all global career tracks
 const recommendedSkillsByCareer: Record<string, string[]> = {
   'ml-intern': ['Python', 'SQL', 'Scikit-learn', 'Pandas', 'NumPy', 'Machine Learning', 'Git', 'FastAPI', 'Docker', 'PyTorch'],
   'data-analyst': ['SQL', 'Python', 'Pandas', 'Excel', 'Data Visualization', 'Power BI', 'Statistics', 'Tableau'],
   'data-scientist': ['Python', 'SQL', 'Machine Learning', 'Statistics', 'Pandas', 'NumPy', 'Data Visualization', 'Deep Learning'],
+  'financial-analyst': ['Financial Modeling', 'Excel', 'Accounting', 'Financial Statement Analysis', 'Valuation', 'Budgeting', 'Power BI', 'Data Analysis'],
+  'investment-banker': ['Financial Modeling', 'DCF Modeling', 'Valuation', 'Financial Accounting', 'Excel', 'M&A Analysis', 'Pitchbook Creation'],
+  'uiux-designer': ['Figma', 'Wireframing', 'User Research', 'Prototyping', 'Design Systems', 'Usability Testing', 'Visual Design'],
+  'product-manager': ['Agile/Scrum', 'Product Strategy', 'User Story Mapping', 'Market Research', 'KPI Tracking', 'Stakeholder Management', 'Jira'],
+  'digital-marketer': ['SEO', 'Google Analytics', 'Content Strategy', 'Performance Marketing', 'Social Media Marketing', 'Copywriting', 'Email Marketing'],
+  'hr-specialist': ['Talent Acquisition', 'Employee Relations', 'HR Analytics', 'Onboarding', 'HRIS', 'Labor Law Compliance', 'Performance Appraisal'],
+  'accountant': ['Accounting', 'Financial Reporting', 'Taxation', 'Auditing', 'Reconciliation', 'Excel', 'QuickBooks'],
+  'management-consultant': ['Business Strategy', 'Hypothesis-Driven Problem Solving', 'Market Sizing', 'Financial Analysis', 'PowerPoint', 'Stakeholder Communication'],
+  'cloud-architect': ['AWS', 'Cloud Architecture', 'Docker', 'Kubernetes', 'Linux', 'Terraform', 'Microservices'],
+  'cybersecurity-analyst': ['Network Security', 'SIEM', 'Vulnerability Assessment', 'Incident Response', 'Linux', 'Penetration Testing', 'Python'],
+  'supply-chain-analyst': ['Inventory Optimization', 'Demand Forecasting', 'ERP Systems', 'Excel', 'Logistics Modeling', 'Vendor Management'],
+  'healthcare-analyst': ['Healthcare Analytics', 'SQL', 'Electronic Health Records (EHR)', 'Biostatistics', 'HIPAA Compliance', 'Excel'],
   'python-dev': ['Python', 'FastAPI', 'REST APIs', 'Git', 'SQL', 'Docker', 'Testing', 'Debugging'],
   'ai-engineer': ['Python', 'PyTorch', 'Deep Learning', 'Machine Learning', 'REST APIs', 'Git', 'NumPy', 'Hugging Face'],
   'web-dev': ['JavaScript', 'React', 'HTML', 'CSS', 'REST APIs', 'Git', 'TypeScript', 'Tailwind CSS'],
-  'software-dev': ['Python', 'Data Structures', 'Algorithms', 'Git', 'SQL', 'Testing', 'System Design']
+  'software-dev': ['Python', 'Data Structures', 'Algorithms', 'Git', 'SQL', 'System Design', 'Testing']
 }
 
 export default function App() {
@@ -124,6 +343,10 @@ export default function App() {
   const [notice, setNotice] = useState('')
   const [active, setActive] = useState('Overview')
   const [profileTab, setProfileTab] = useState<'basics' | 'skills' | 'projects' | 'experience' | 'certifications'>('skills')
+  const [showCandidateModal, setShowCandidateModal] = useState(false)
+  const [isCustomCareer, setIsCustomCareer] = useState(false)
+  const [customCareerInput, setCustomCareerInput] = useState('')
+
 
   // Resume Parsing details
   const [resumeInfo, setResumeInfo] = useState<{
@@ -235,6 +458,40 @@ export default function App() {
     }
   }
 
+  // Clear all profile data to start evaluating another person from scratch
+  const clearCandidateProfile = () => {
+    setProfile(blankProfile)
+    setResumeText('')
+    setAnalysis(null)
+    setResumeInfo(null)
+    setError('')
+    setActive('Profile')
+    setProfileTab('basics')
+    setNotice('Profile reset to a blank slate! Enter candidate details, select any career role, or upload a resume.')
+    setShowCandidateModal(false)
+  }
+
+  // Load a specific candidate persona and compute live analysis
+  const selectPersona = async (personaProfile: Profile) => {
+    setProfile(personaProfile)
+    setResumeText(personaProfile.resume_text)
+    setShowCandidateModal(false)
+    setError('')
+    setNotice(`Switched to candidate ${personaProfile.name || 'Profile'} (${personaProfile.target_career}). Computing live analysis...`)
+    setBusy(true)
+    try {
+      await api.saveProfile(personaProfile)
+      const res = await api.analyze(personaProfile)
+      setAnalysis(res)
+      setActive('Overview')
+      setNotice(`Analysis successfully loaded for ${personaProfile.name}! Readiness score: ${res.readiness.overall_score}% (${res.readiness.classification}).`)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Analysis failed to complete.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
   // Load clean demo profile
   const loadDemo = () => {
     setProfile(demoProfile)
@@ -242,8 +499,9 @@ export default function App() {
     setAnalysis(null)
     setResumeInfo(null)
     setError('')
-    setNotice('Demo profile loaded. Click "Analyze career" to compute your live readiness score and matches.')
+    setNotice('Demo profile loaded. Click "Run Live Analysis" to compute readiness scores and matches.')
   }
+
 
   // Quick Skill Helpers
   const addSkill = (skill: string) => {
@@ -431,14 +689,22 @@ export default function App() {
 
             <button
               className="btn btn-secondary btn-sm"
-              title="Reset with clean demo data"
-              onClick={loadDemo}
+              title="Switch candidate persona or test different domains"
+              onClick={() => setShowCandidateModal(true)}
             >
-              <RefreshCw size={14} /> Load Demo
+              <Users size={14} /> Switch Candidate
             </button>
 
-            <div className="avatar" title={profile.name || 'Student'}>
-              {(profile.name || 'P').slice(0, 1).toUpperCase()}
+            <button
+              className="btn btn-secondary btn-sm"
+              title="Clear profile to evaluate a new person"
+              onClick={clearCandidateProfile}
+            >
+              <UserX size={14} /> Clear Profile
+            </button>
+
+            <div className="avatar" title={profile.name || 'Candidate'}>
+              {(profile.name || 'C').slice(0, 1).toUpperCase()}
             </div>
           </div>
         </header>
@@ -475,8 +741,17 @@ export default function App() {
             </div>
 
             <div className="header-cta-group">
-              <button className="btn btn-secondary" onClick={loadDemo}>
-                Load Demo Profile
+              <button
+                className="btn btn-secondary"
+                onClick={() => setShowCandidateModal(true)}
+              >
+                <Users size={15} /> Switch Candidate
+              </button>
+              <button
+                className="btn btn-secondary"
+                onClick={clearCandidateProfile}
+              >
+                <UserX size={15} /> Clear Profile
               </button>
               <button
                 className="btn btn-accent"
@@ -951,24 +1226,45 @@ export default function App() {
                   <div className="field">
                     <label>
                       <span>Degree Program / Qualification</span>
-                      <span className="hint">e.g. B.Tech., B.C.A., M.C.A., B.Sc.</span>
+                      <span className="hint">e.g. B.Com, B.A., B.Sc., B.B.A., B.Des, B.Tech, M.B.A.</span>
                     </label>
                     <input
                       value={profile.education}
                       onChange={e => updateProfile('education', e.target.value)}
-                      placeholder="e.g. Bachelor of Technology (B.Tech.) in Computer Science"
+                      placeholder="e.g. Bachelor of Commerce (B.Com) / B.Des / B.Tech / Self-Taught"
                     />
+                    <div className="degree-pills-row">
+                      {[
+                        'B.Com (Commerce)',
+                        'B.A. (Arts/Media)',
+                        'B.Sc. (Science)',
+                        'B.B.A. (Business)',
+                        'B.Des (Design)',
+                        'B.Tech / B.E.',
+                        'M.B.A.',
+                        'Self-Taught / Bootcamp'
+                      ].map(deg => (
+                        <button
+                          type="button"
+                          key={deg}
+                          className={`degree-pill-btn ${profile.education?.includes(deg.split(' ')[0]) ? 'active' : ''}`}
+                          onClick={() => updateProfile('education', deg)}
+                        >
+                          {deg}
+                        </button>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="field">
                     <label>
                       <span>Department / Specialization</span>
-                      <span className="hint">Academic branch</span>
+                      <span className="hint">Academic focus or domain</span>
                     </label>
                     <input
                       value={profile.branch}
                       onChange={e => updateProfile('branch', e.target.value)}
-                      placeholder="e.g. Artificial Intelligence & Data Science"
+                      placeholder="e.g. Financial Accounting, Visual Design, AI & ML, Marketing"
                     />
                   </div>
 
@@ -980,25 +1276,44 @@ export default function App() {
                     <input
                       value={profile.semester}
                       onChange={e => updateProfile('semester', e.target.value)}
-                      placeholder="e.g. 7th Semester (Final Year)"
+                      placeholder="e.g. 7th Semester (Final Year) or Recent Graduate"
                     />
                   </div>
 
                   <div className="field" style={{ gridColumn: 'span 2' }}>
-                    <label>
-                      <span>Target Career Benchmark</span>
-                      <span className="hint">Select the role you wish to be evaluated against</span>
-                    </label>
-                    <select
-                      value={profile.target_career}
-                      onChange={e => updateProfile('target_career', e.target.value)}
-                    >
-                      {careers.map(c => (
-                        <option key={c.id} value={c.name}>
-                          {c.name}
-                        </option>
-                      ))}
-                    </select>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                      <label style={{ margin: 0 }}>
+                        <span>Target Career Benchmark</span>
+                        <span className="hint">Select from global roles or type custom position</span>
+                      </label>
+                      <button
+                        type="button"
+                        className="btn btn-secondary btn-sm"
+                        style={{ padding: '2px 8px', fontSize: 11 }}
+                        onClick={() => setIsCustomCareer(!isCustomCareer)}
+                      >
+                        {isCustomCareer ? 'Choose from Catalog' : 'Enter Custom Role'}
+                      </button>
+                    </div>
+
+                    {isCustomCareer ? (
+                      <input
+                        value={profile.target_career}
+                        onChange={e => updateProfile('target_career', e.target.value)}
+                        placeholder="e.g. Healthcare Operations Analyst, Investment Banker..."
+                      />
+                    ) : (
+                      <select
+                        value={profile.target_career}
+                        onChange={e => updateProfile('target_career', e.target.value)}
+                      >
+                        {careers.map(c => (
+                          <option key={c.id} value={c.name}>
+                            {c.name}
+                          </option>
+                        ))}
+                      </select>
+                    )}
                   </div>
                 </div>
               )}
@@ -1699,6 +2014,22 @@ export default function App() {
 
                           <p className="action-text">{act.action}</p>
 
+                          {act.course && (
+                            <div className="course-box">
+                              <div className="course-title">
+                                <BookOpen size={14} style={{ color: '#0284c7' }} />
+                                <strong>{act.course}</strong>
+                                {act.provider && <span className="course-provider">via {act.provider}</span>}
+                              </div>
+                              {act.degree_bridge && (
+                                <div className="course-bridge">
+                                  <GraduationCap size={13} style={{ color: '#059669' }} />
+                                  <span><b>Degree Bridge:</b> {act.degree_bridge}</span>
+                                </div>
+                              )}
+                            </div>
+                          )}
+
                           <div className="why-callout">
                             <Sparkles size={16} style={{ flexShrink: 0, marginTop: 1 }} />
                             <span>
@@ -2079,6 +2410,85 @@ export default function App() {
                 }}
               >
                 <Share2 size={14} /> Copy to Clipboard
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Candidate Profile Switcher & Clear Modal */}
+      {showCandidateModal && (
+        <div className="modal-overlay" onClick={() => setShowCandidateModal(false)}>
+          <div className="modal-content" style={{ maxWidth: 720 }} onClick={e => e.stopPropagation()}>
+            <div className="modal-header">
+              <div>
+                <h2>Evaluate Candidate or Switch Persona</h2>
+                <p style={{ margin: '4px 0 0', fontSize: 13, color: '#64748b' }}>
+                  Clear the slate to evaluate a new person or explore diverse global personas across commerce, arts, business, design, and tech.
+                </p>
+              </div>
+              <button
+                className="icon-action-btn"
+                onClick={() => setShowCandidateModal(false)}
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <div style={{ padding: '8px 0 16px' }}>
+              <div style={{ marginBottom: 16 }}>
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  style={{
+                    width: '100%',
+                    justifyContent: 'center',
+                    padding: '12px 18px',
+                    borderColor: '#e11d48',
+                    color: '#e11d48',
+                    background: '#fff1f2',
+                    fontWeight: 700
+                  }}
+                  onClick={clearCandidateProfile}
+                >
+                  <UserX size={16} /> ✨ Clear All & Start Blank Candidate Profile
+                </button>
+              </div>
+
+              <div style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: '#64748b', marginBottom: 10 }}>
+                Or Pre-load a Multi-Disciplinary Persona:
+              </div>
+
+              <div className="persona-grid">
+                {candidatePersonas.filter(p => p.id !== 'blank').map(persona => (
+                  <div
+                    key={persona.id}
+                    className="persona-card"
+                    onClick={() => selectPersona(persona.profile)}
+                  >
+                    <div className="persona-header">
+                      <div className="persona-avatar">{persona.icon}</div>
+                      <div>
+                        <h4>{persona.name}</h4>
+                        <span className="persona-degree">{persona.degree}</span>
+                      </div>
+                    </div>
+                    <p className="persona-desc">{persona.description}</p>
+                    <div className="persona-footer">
+                      <span className="persona-badge">{persona.badge}</span>
+                      <span className="persona-target">{persona.target}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 12 }}>
+              <button
+                className="btn btn-secondary btn-sm"
+                onClick={() => setShowCandidateModal(false)}
+              >
+                Close
               </button>
             </div>
           </div>

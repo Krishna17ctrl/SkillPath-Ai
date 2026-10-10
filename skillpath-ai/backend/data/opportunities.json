@@ -2,243 +2,225 @@
   {
     "id": "opp-001",
     "role": "Machine Learning Intern",
-    "company": "Northstar Analytics (Demo)",
+    "company": "Northstar AI Labs (Global Demo)",
     "career_id": "ml-intern",
-    "required_skills": [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "Machine Learning",
-      "SQL",
-      "Git"
-    ],
-    "preferred_skills": [
-      "Scikit-learn",
-      "Data Visualization"
-    ],
-    "education": [
-      "BCA",
-      "BSc",
-      "BTech",
-      "MCA"
-    ],
+    "required_skills": ["Python", "Pandas", "NumPy", "Machine Learning", "SQL", "Git"],
+    "preferred_skills": ["Scikit-learn", "Data Visualization"],
+    "education": ["BTech", "BSc", "BCA", "MCA", "Any Degree"],
     "projects_required": true,
     "experience_required": false,
     "application_url": "https://example.com/opportunities/ml-intern",
-    "critical_skills": [
-      "Python",
-      "Machine Learning"
-    ],
-    "description": "Assist with data preparation, baseline models, and model evaluation."
+    "critical_skills": ["Python", "Machine Learning"],
+    "description": "Assist with data pipelines, model feature engineering, training baselines, and evaluation metrics."
   },
   {
     "id": "opp-002",
-    "role": "Junior Data Analyst Intern",
-    "company": "BlueOak Insights (Demo)",
-    "career_id": "data-analyst",
-    "required_skills": [
-      "SQL",
-      "Excel",
-      "Pandas",
-      "Statistics"
-    ],
-    "preferred_skills": [
-      "Power BI",
-      "Python"
-    ],
-    "education": [
-      "BCA",
-      "BCom",
-      "BSc",
-      "BTech"
-    ],
-    "projects_required": false,
+    "role": "Financial Analyst",
+    "company": "Apex Capital & Advisory (Global Demo)",
+    "career_id": "financial-analyst",
+    "required_skills": ["Financial Modeling", "Excel", "Accounting", "Financial Statement Analysis", "Valuation"],
+    "preferred_skills": ["Power BI", "Budgeting", "Data Analysis"],
+    "education": ["BCom", "BBA", "BSc", "MBA", "Any Degree"],
+    "projects_required": true,
     "experience_required": false,
-    "application_url": "https://example.com/opportunities/data-analyst",
-    "critical_skills": [
-      "SQL"
-    ],
-    "description": "Prepare reports, validate datasets, and communicate findings."
+    "application_url": "https://example.com/opportunities/financial-analyst",
+    "critical_skills": ["Financial Modeling", "Excel", "Accounting"],
+    "description": "Perform cash flow modeling, financial statement reconciliation, cost budgeting, and valuation forecasts."
   },
   {
     "id": "opp-003",
-    "role": "Python Backend Intern",
-    "company": "ByteBridge Labs (Demo)",
-    "career_id": "python-dev",
-    "required_skills": [
-      "Python",
-      "Git",
-      "REST APIs",
-      "SQL"
-    ],
-    "preferred_skills": [
-      "FastAPI",
-      "Testing"
-    ],
-    "education": [
-      "BCA",
-      "BSc",
-      "BTech",
-      "MCA"
-    ],
+    "role": "UI/UX Product Designer",
+    "company": "DesignSphere Studio (Global Demo)",
+    "career_id": "uiux-designer",
+    "required_skills": ["Figma", "Wireframing", "User Research", "Prototyping", "Design Systems"],
+    "preferred_skills": ["Usability Testing", "Visual Design"],
+    "education": ["BA", "BDes", "BSc", "Self-Taught", "Any Degree"],
     "projects_required": true,
     "experience_required": false,
-    "application_url": "https://example.com/opportunities/python-backend",
-    "critical_skills": [
-      "Python",
-      "Git"
-    ],
-    "description": "Build and test small API endpoints with mentor guidance."
+    "application_url": "https://example.com/opportunities/uiux-designer",
+    "critical_skills": ["Figma", "Prototyping", "User Research"],
+    "description": "Design user journey flows, responsive wireframes, design systems, and interactive Figma prototypes."
   },
   {
     "id": "opp-004",
-    "role": "AI Engineering Trainee",
-    "company": "ModelWorks Studio (Demo)",
-    "career_id": "ai-engineer",
-    "required_skills": [
-      "Python",
-      "Machine Learning",
-      "NumPy",
-      "Git"
-    ],
-    "preferred_skills": [
-      "PyTorch",
-      "Deep Learning",
-      "REST APIs"
-    ],
-    "education": [
-      "BCA",
-      "BSc",
-      "BTech",
-      "MCA"
-    ],
+    "role": "Associate Product Manager",
+    "company": "TechScale Ventures (Global Demo)",
+    "career_id": "product-manager",
+    "required_skills": ["Agile/Scrum", "Product Strategy", "User Story Mapping", "Market Research", "Stakeholder Management"],
+    "preferred_skills": ["Jira", "KPI Tracking"],
+    "education": ["BBA", "BCom", "BTech", "MBA", "Any Degree"],
     "projects_required": true,
     "experience_required": false,
-    "application_url": "https://example.com/opportunities/ai-trainee",
-    "critical_skills": [
-      "Python",
-      "Machine Learning"
-    ],
-    "description": "Support experiments and package simple model inference workflows."
+    "application_url": "https://example.com/opportunities/product-manager",
+    "critical_skills": ["Product Strategy", "Agile/Scrum"],
+    "description": "Bridge product roadmaps, user research insights, sprint milestones, and engineering deliverables."
   },
   {
     "id": "opp-005",
-    "role": "Frontend Developer Intern",
-    "company": "PixelRoute (Demo)",
-    "career_id": "web-dev",
-    "required_skills": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Git"
-    ],
-    "preferred_skills": [
-      "React",
-      "REST APIs"
-    ],
-    "education": [
-      "BCA",
-      "BSc",
-      "BTech",
-      "MCA"
-    ],
-    "projects_required": true,
+    "role": "Junior Data Analyst",
+    "company": "BlueOak Analytics (Global Demo)",
+    "career_id": "data-analyst",
+    "required_skills": ["SQL", "Excel", "Pandas", "Statistics", "Power BI"],
+    "preferred_skills": ["Python", "Data Visualization"],
+    "education": ["BCom", "BCA", "BSc", "BTech", "Any Degree"],
+    "projects_required": false,
     "experience_required": false,
-    "application_url": "https://example.com/opportunities/frontend",
-    "critical_skills": [
-      "HTML",
-      "JavaScript"
-    ],
-    "description": "Implement responsive interfaces and connect them to APIs."
+    "application_url": "https://example.com/opportunities/data-analyst",
+    "critical_skills": ["SQL", "Excel"],
+    "description": "Develop automated executive dashboards, run SQL aggregations, and present key business metric drivers."
   },
   {
     "id": "opp-006",
-    "role": "Data Science Intern",
-    "company": "SignalSpring (Demo)",
-    "career_id": "data-scientist",
-    "required_skills": [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "Statistics",
-      "Machine Learning"
-    ],
-    "preferred_skills": [
-      "SQL",
-      "Scikit-learn",
-      "Data Visualization"
-    ],
-    "education": [
-      "BCA",
-      "BSc",
-      "BTech",
-      "MCA"
-    ],
-    "projects_required": true,
+    "role": "Digital Marketing Strategist",
+    "company": "GrowthWave Media (Global Demo)",
+    "career_id": "digital-marketer",
+    "required_skills": ["SEO", "Google Analytics", "Content Strategy", "Performance Marketing", "Social Media Marketing"],
+    "preferred_skills": ["Copywriting", "Email Marketing"],
+    "education": ["BA", "BCom", "BBA", "Any Degree"],
+    "projects_required": false,
     "experience_required": false,
-    "application_url": "https://example.com/opportunities/data-science",
-    "critical_skills": [
-      "Python",
-      "Statistics"
-    ],
-    "description": "Explore datasets, build baseline models, and present results."
+    "application_url": "https://example.com/opportunities/digital-marketer",
+    "critical_skills": ["SEO", "Google Analytics"],
+    "description": "Execute organic SEO campaigns, monitor conversion analytics, and optimize social media ad channels."
   },
   {
     "id": "opp-007",
-    "role": "Software Development Intern",
-    "company": "CedarStack (Demo)",
-    "career_id": "software-dev",
-    "required_skills": [
-      "Python",
-      "Data Structures",
-      "Algorithms",
-      "Git"
-    ],
-    "preferred_skills": [
-      "SQL",
-      "Testing"
-    ],
-    "education": [
-      "BCA",
-      "BSc",
-      "BTech",
-      "MCA"
-    ],
-    "projects_required": true,
+    "role": "Corporate Accountant",
+    "company": "Vertex Financial Group (Global Demo)",
+    "career_id": "accountant",
+    "required_skills": ["Accounting", "Financial Reporting", "Taxation", "Auditing", "Excel", "Reconciliation"],
+    "preferred_skills": ["QuickBooks", "Tally"],
+    "education": ["BCom", "MCom", "BBA", "Any Degree"],
+    "projects_required": false,
     "experience_required": false,
-    "application_url": "https://example.com/opportunities/software-dev",
-    "critical_skills": [
-      "Data Structures",
-      "Algorithms"
-    ],
-    "description": "Solve scoped programming tasks and contribute tested code."
+    "application_url": "https://example.com/opportunities/accountant",
+    "critical_skills": ["Accounting", "Financial Reporting"],
+    "description": "Audit general ledger accounts, process end-of-month reconciliations, and draft balance sheet statements."
   },
   {
     "id": "opp-008",
-    "role": "BI Reporting Intern",
-    "company": "ClearMetric (Demo)",
-    "career_id": "data-analyst",
-    "required_skills": [
-      "Excel",
-      "SQL",
-      "Data Visualization"
-    ],
-    "preferred_skills": [
-      "Power BI",
-      "Statistics"
-    ],
-    "education": [
-      "BCA",
-      "BCom",
-      "BSc",
-      "BTech"
-    ],
+    "role": "Investment Banking Analyst",
+    "company": "Morgan Capital Partners (Global Demo)",
+    "career_id": "investment-banker",
+    "required_skills": ["Financial Modeling", "DCF Modeling", "Valuation", "Financial Accounting", "Excel"],
+    "preferred_skills": ["M&A Analysis", "Pitchbook Creation"],
+    "education": ["BCom", "BBA", "Economics", "MBA", "Any Degree"],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/investment-banker",
+    "critical_skills": ["Financial Modeling", "Valuation"],
+    "description": "Construct 3-statement financial forecasts, discounted cash flow (DCF) models, and client pitchbooks."
+  },
+  {
+    "id": "opp-009",
+    "role": "Human Resources Specialist",
+    "company": "Vanguard Talent Labs (Global Demo)",
+    "career_id": "hr-specialist",
+    "required_skills": ["Talent Acquisition", "Employee Relations", "HR Analytics", "HRIS", "Onboarding"],
+    "preferred_skills": ["Labor Law Compliance", "Performance Appraisal"],
+    "education": ["BA", "BBA", "BCom", "MBA", "Any Degree"],
     "projects_required": false,
     "experience_required": false,
-    "application_url": "https://example.com/opportunities/bi-reporting",
-    "critical_skills": [
-      "SQL"
-    ],
-    "description": "Maintain reporting views and create basic dashboards."
+    "application_url": "https://example.com/opportunities/hr-specialist",
+    "critical_skills": ["Talent Acquisition", "HRIS"],
+    "description": "Coordinate candidate recruiting pipelines, analyze employee turnover metrics, and oversee onboarding."
+  },
+  {
+    "id": "opp-010",
+    "role": "Management Consulting Associate",
+    "company": "Boston Strategy Advisory (Global Demo)",
+    "career_id": "management-consultant",
+    "required_skills": ["Business Strategy", "Hypothesis-Driven Problem Solving", "Market Sizing", "Financial Analysis", "Stakeholder Communication"],
+    "preferred_skills": ["PowerPoint", "Data Interpretation"],
+    "education": ["BBA", "BCom", "BTech", "BA", "MBA", "Any Degree"],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/consultant",
+    "critical_skills": ["Business Strategy", "Hypothesis-Driven Problem Solving"],
+    "description": "Structure complex business problems into MECE frameworks, conduct market sizing, and present strategic recommendations."
+  },
+  {
+    "id": "opp-011",
+    "role": "Software Engineer Intern",
+    "company": "Novasphere Tech (Global Demo)",
+    "career_id": "software-dev",
+    "required_skills": ["Python", "Data Structures", "Algorithms", "Git", "SQL"],
+    "preferred_skills": ["Testing", "System Design"],
+    "education": ["BTech", "BCA", "BSc", "Any Degree"],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/software-engineer",
+    "critical_skills": ["Data Structures", "Algorithms"],
+    "description": "Collaborate on production backend microservices, algorithmic optimizations, and unit test suites."
+  },
+  {
+    "id": "opp-012",
+    "role": "Full Stack Web Developer",
+    "company": "StackFlow Solutions (Global Demo)",
+    "career_id": "web-dev",
+    "required_skills": ["HTML", "CSS", "JavaScript", "React", "Git", "REST APIs"],
+    "preferred_skills": ["TypeScript", "Next.js"],
+    "education": ["BTech", "BCA", "BSc", "Self-Taught", "Any Degree"],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/web-dev",
+    "critical_skills": ["JavaScript", "React"],
+    "description": "Build high-performance responsive web interfaces, implement state management, and integrate REST APIs."
+  },
+  {
+    "id": "opp-013",
+    "role": "Cloud Solutions Architect",
+    "company": "CloudPulse Global (Global Demo)",
+    "career_id": "cloud-architect",
+    "required_skills": ["AWS", "Cloud Architecture", "Docker", "Linux", "Kubernetes"],
+    "preferred_skills": ["Terraform", "Microservices"],
+    "education": ["BTech", "BSc", "BCA", "Any Degree"],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/cloud-architect",
+    "critical_skills": ["AWS", "Cloud Architecture"],
+    "description": "Architect scalable high-availability cloud infrastructure, container deployments, and security postures."
+  },
+  {
+    "id": "opp-014",
+    "role": "Cybersecurity Analyst",
+    "company": "CyberShield Defense (Global Demo)",
+    "career_id": "cybersecurity-analyst",
+    "required_skills": ["Network Security", "SIEM", "Incident Response", "Vulnerability Assessment", "Linux"],
+    "preferred_skills": ["Penetration Testing", "Python"],
+    "education": ["BTech", "BCA", "BSc", "Any Degree"],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/cybersecurity-analyst",
+    "critical_skills": ["Network Security", "Incident Response"],
+    "description": "Monitor real-time threat telemetry, coordinate incident triage, and remediate discovered system vulnerabilities."
+  },
+  {
+    "id": "opp-015",
+    "role": "Healthcare Data Coordinator",
+    "company": "BioLife Medical Informatics (Global Demo)",
+    "career_id": "healthcare-analyst",
+    "required_skills": ["Healthcare Analytics", "SQL", "Electronic Health Records (EHR)", "HIPAA Compliance", "Excel"],
+    "preferred_skills": ["Biostatistics", "Data Privacy"],
+    "education": ["BSc", "BPharm", "BCA", "Any Degree"],
+    "projects_required": false,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/healthcare-analyst",
+    "critical_skills": ["Healthcare Analytics", "HIPAA Compliance"],
+    "description": "Maintain patient electronic health records integrity, ensure HIPAA compliance, and extract clinical metrics."
+  },
+  {
+    "id": "opp-016",
+    "role": "Supply Chain & Logistics Analyst",
+    "company": "OmniFreight Logistics (Global Demo)",
+    "career_id": "supply-chain-analyst",
+    "required_skills": ["Inventory Optimization", "Demand Forecasting", "ERP Systems", "Excel", "Data Analysis"],
+    "preferred_skills": ["Logistics Modeling", "Vendor Management"],
+    "education": ["BCom", "BBA", "BTech", "BSc", "Any Degree"],
+    "projects_required": true,
+    "experience_required": false,
+    "application_url": "https://example.com/opportunities/supply-chain-analyst",
+    "critical_skills": ["Inventory Optimization", "Demand Forecasting"],
+    "description": "Model multi-warehouse inventory safety stock levels, analyze shipment route efficiencies, and audit supplier SLAs."
   }
 ]

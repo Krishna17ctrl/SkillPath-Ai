@@ -59,7 +59,17 @@ def match_opportunities(profile: dict, target_career: str | None = None) -> list
         skill_score = (len(matched) + 0.5 * len(developing)) / len(required) * 70 if required else 0
         preferred_score = (sum(1 for s in preferred if any(v in student_variants for v in _extract_variants(s))) / len(preferred) * 10) if preferred else 5
         project_score = 10 if projects else (3 if not opp.get("projects_required") else 0)
-        edu_score = 10 if not education or any(_norm(x) in education or education in _norm(x) for x in opp.get("education", [])) else 4
+        
+        certifications = profile.get("certifications") or []
+        opp_edus = [_norm(x) for x in opp.get("education", [])]
+        # Any degree is recognized; accredited certifications and relevant coursework bridge formal degree requirements
+        edu_matched = (
+            not education
+            or "any degree" in opp_edus
+            or any(x in education or education in x for x in opp_edus)
+            or bool(certifications)
+        )
+        edu_score = 10 if edu_matched else 5
         score = round(min(100, skill_score + preferred_score + project_score + edu_score))
         
         critical_missing = [
@@ -75,6 +85,8 @@ def match_opportunities(profile: dict, target_career: str | None = None) -> list
             reasons.append(f"Build concrete project evidence in {', '.join(missing[:3])}.")
         if projects:
             reasons.append("Your documented project portfolio significantly bolsters this application match.")
+        if bool(certifications) and not any(x in education or education in x for x in opp_edus):
+            reasons.append("Your accredited certifications effectively bridge academic degree requirements.")
         if not reasons:
             reasons.append("Add relevant core skills and documented projects to advance your match score.")
             
@@ -93,12 +105,23 @@ def match_opportunities(profile: dict, target_career: str | None = None) -> list
 def _related_aliases(skill):
     aliases = {
         "scikit-learn": ["machine learning", "scikit learn", "sklearn"],
-        "machine learning": ["scikit-learn", "numpy", "pandas"],
-        "sql": ["postgresql", "mysql", "sqlite"],
-        "javascript": ["react", "typescript"],
-        "rest apis": ["fastapi", "rest api"],
-        "fastapi": ["rest apis", "python"],
-        "data visualization": ["power bi", "matplotlib", "seaborn"]
+        "machine learning": ["scikit-learn", "numpy", "pandas", "deep learning"],
+        "sql": ["postgresql", "mysql", "sqlite", "relational databases"],
+        "javascript": ["react", "typescript", "frontend"],
+        "rest apis": ["fastapi", "rest api", "backend"],
+        "fastapi": ["rest apis", "python", "flask", "django"],
+        "data visualization": ["power bi", "matplotlib", "seaborn", "tableau"],
+        "excel": ["spreadsheets", "financial modeling", "vlookup"],
+        "financial modeling": ["excel", "dcf modeling", "valuation"],
+        "figma": ["adobe xd", "sketch", "prototyping", "ui design"],
+        "prototyping": ["figma", "wireframing"],
+        "user research": ["usability testing", "interviews", "ux research"],
+        "product strategy": ["roadmapping", "agile", "market research"],
+        "seo": ["search engine optimization", "content strategy", "google analytics"],
+        "google analytics": ["ga4", "web analytics", "data analysis"],
+        "accounting": ["financial reporting", "auditing", "bookkeeping", "quickbooks"],
+        "aws": ["cloud architecture", "azure", "google cloud"],
+        "talent acquisition": ["recruiting", "interviewing", "sourcing"]
     }
     return aliases.get(_norm(skill), [])
 

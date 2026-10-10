@@ -2,6 +2,7 @@
   {
     "id": "ml-intern",
     "name": "Machine Learning Intern",
+    "category": "Technology & AI",
     "required_skills": [
       "Python",
       "SQL",
@@ -16,22 +17,15 @@
       "Machine Learning"
     ],
     "related_skills": {
-      "Machine Learning": [
-        "Scikit-learn",
-        "NumPy"
-      ],
-      "Scikit-learn": [
-        "Machine Learning"
-      ],
-      "SQL": [
-        "PostgreSQL",
-        "MySQL"
-      ]
+      "Machine Learning": ["Scikit-learn", "NumPy", "Deep Learning"],
+      "Scikit-learn": ["Machine Learning"],
+      "SQL": ["PostgreSQL", "MySQL"]
     }
   },
   {
     "id": "data-analyst",
     "name": "Data Analyst",
+    "category": "Data & Analytics",
     "required_skills": [
       "SQL",
       "Python",
@@ -43,20 +37,19 @@
     ],
     "critical_skills": [
       "SQL",
+      "Excel",
       "Statistics"
     ],
     "related_skills": {
-      "Power BI": [
-        "Data Visualization"
-      ],
-      "Python": [
-        "Pandas"
-      ]
+      "Power BI": ["Data Visualization", "Tableau"],
+      "Python": ["Pandas", "R"],
+      "Excel": ["Financial Modeling", "Spreadsheets"]
     }
   },
   {
     "id": "data-scientist",
-    "name": "Data Scientist Intern",
+    "name": "Data Scientist",
+    "category": "Data & Analytics",
     "required_skills": [
       "Python",
       "SQL",
@@ -73,94 +66,347 @@
       "Machine Learning"
     ],
     "related_skills": {
-      "Scikit-learn": [
-        "Machine Learning"
-      ],
-      "Pandas": [
-        "Python"
-      ]
+      "Statistics": ["Hypothesis Testing", "Probability"],
+      "Machine Learning": ["Deep Learning", "Predictive Modeling"]
+    }
+  },
+  {
+    "id": "financial-analyst",
+    "name": "Financial Analyst",
+    "category": "Finance & Commerce",
+    "required_skills": [
+      "Financial Modeling",
+      "Excel",
+      "Accounting",
+      "Financial Statement Analysis",
+      "Valuation",
+      "Budgeting",
+      "Data Analysis"
+    ],
+    "critical_skills": [
+      "Financial Modeling",
+      "Excel",
+      "Accounting"
+    ],
+    "related_skills": {
+      "Financial Modeling": ["DCF Modeling", "Valuation", "Excel"],
+      "Accounting": ["Financial Statement Analysis", "Auditing"],
+      "Data Analysis": ["Power BI", "SQL"]
+    }
+  },
+  {
+    "id": "investment-banker",
+    "name": "Investment Banking Analyst",
+    "category": "Finance & Commerce",
+    "required_skills": [
+      "Financial Modeling",
+      "DCF Modeling",
+      "Valuation",
+      "Financial Accounting",
+      "Excel",
+      "M&A Analysis",
+      "Pitchbook Creation"
+    ],
+    "critical_skills": [
+      "Financial Modeling",
+      "DCF Modeling",
+      "Valuation"
+    ],
+    "related_skills": {
+      "Financial Modeling": ["LBO Modeling", "Valuation"],
+      "Financial Accounting": ["Corporate Finance", "Accounting"]
+    }
+  },
+  {
+    "id": "uiux-designer",
+    "name": "UI/UX Product Designer",
+    "category": "Design & Creative",
+    "required_skills": [
+      "Figma",
+      "Wireframing",
+      "User Research",
+      "Prototyping",
+      "Design Systems",
+      "Usability Testing",
+      "Visual Design"
+    ],
+    "critical_skills": [
+      "Figma",
+      "User Research",
+      "Prototyping"
+    ],
+    "related_skills": {
+      "Figma": ["Adobe XD", "Sketch", "Prototyping"],
+      "User Research": ["Usability Testing", "Information Architecture"],
+      "Visual Design": ["Typography", "Color Theory", "UI Design"]
+    }
+  },
+  {
+    "id": "product-manager",
+    "name": "Product Manager",
+    "category": "Business & Strategy",
+    "required_skills": [
+      "Agile/Scrum",
+      "Product Strategy",
+      "User Story Mapping",
+      "Market Research",
+      "KPI Tracking",
+      "Stakeholder Management",
+      "Jira"
+    ],
+    "critical_skills": [
+      "Product Strategy",
+      "Agile/Scrum",
+      "Stakeholder Management"
+    ],
+    "related_skills": {
+      "Product Strategy": ["Market Research", "Competitive Analysis"],
+      "Agile/Scrum": ["Jira", "Sprint Planning", "Kanban"],
+      "KPI Tracking": ["Data Analysis", "A/B Testing"]
+    }
+  },
+  {
+    "id": "digital-marketer",
+    "name": "Digital Marketing Strategist",
+    "category": "Marketing & Communications",
+    "required_skills": [
+      "SEO",
+      "Google Analytics",
+      "Content Strategy",
+      "Performance Marketing",
+      "Social Media Marketing",
+      "Copywriting",
+      "Email Marketing"
+    ],
+    "critical_skills": [
+      "SEO",
+      "Google Analytics",
+      "Content Strategy"
+    ],
+    "related_skills": {
+      "Google Analytics": ["Web Analytics", "Data Analysis"],
+      "SEO": ["Keyword Research", "On-Page Optimization"],
+      "Performance Marketing": ["Google Ads", "Meta Ads"]
+    }
+  },
+  {
+    "id": "hr-specialist",
+    "name": "Human Resources Specialist",
+    "category": "People & Operations",
+    "required_skills": [
+      "Talent Acquisition",
+      "Employee Relations",
+      "HR Analytics",
+      "Onboarding",
+      "HRIS",
+      "Labor Law Compliance",
+      "Performance Appraisal"
+    ],
+    "critical_skills": [
+      "Talent Acquisition",
+      "Employee Relations",
+      "HRIS"
+    ],
+    "related_skills": {
+      "Talent Acquisition": ["Recruiting", "Interviewing"],
+      "HR Analytics": ["Excel", "Workforce Planning"],
+      "HRIS": ["Workday", "BambooHR"]
+    }
+  },
+  {
+    "id": "accountant",
+    "name": "Corporate Accountant",
+    "category": "Finance & Commerce",
+    "required_skills": [
+      "Financial Reporting",
+      "Accounting",
+      "Taxation",
+      "Auditing",
+      "Reconciliation",
+      "Excel",
+      "QuickBooks"
+    ],
+    "critical_skills": [
+      "Accounting",
+      "Financial Reporting",
+      "Taxation"
+    ],
+    "related_skills": {
+      "Accounting": ["General Ledger", "Journal Entries", "Bookkeeping"],
+      "QuickBooks": ["Tally", "SAP", "ERP"]
+    }
+  },
+  {
+    "id": "management-consultant",
+    "name": "Management Consultant",
+    "category": "Business & Strategy",
+    "required_skills": [
+      "Business Strategy",
+      "Hypothesis-Driven Problem Solving",
+      "Market Sizing",
+      "Financial Analysis",
+      "PowerPoint",
+      "Stakeholder Communication",
+      "Data Interpretation"
+    ],
+    "critical_skills": [
+      "Business Strategy",
+      "Hypothesis-Driven Problem Solving",
+      "Stakeholder Communication"
+    ],
+    "related_skills": {
+      "Business Strategy": ["Competitive Analysis", "Market Analysis"],
+      "Financial Analysis": ["Excel", "Cost Modeling"]
+    }
+  },
+  {
+    "id": "cloud-architect",
+    "name": "Cloud Solutions Architect",
+    "category": "Technology & AI",
+    "required_skills": [
+      "AWS",
+      "Cloud Architecture",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "Terraform",
+      "Microservices"
+    ],
+    "critical_skills": [
+      "AWS",
+      "Cloud Architecture",
+      "Linux"
+    ],
+    "related_skills": {
+      "AWS": ["Azure", "Google Cloud", "Cloud Computing"],
+      "Kubernetes": ["Docker", "Containerization"]
+    }
+  },
+  {
+    "id": "cybersecurity-analyst",
+    "name": "Cybersecurity Analyst",
+    "category": "Technology & AI",
+    "required_skills": [
+      "Network Security",
+      "SIEM",
+      "Vulnerability Assessment",
+      "Incident Response",
+      "Linux",
+      "Penetration Testing",
+      "Python"
+    ],
+    "critical_skills": [
+      "Network Security",
+      "Incident Response",
+      "Vulnerability Assessment"
+    ],
+    "related_skills": {
+      "Network Security": ["Firewalls", "Wireshark", "TCP/IP"],
+      "SIEM": ["Splunk", "Security Operations"]
+    }
+  },
+  {
+    "id": "supply-chain-analyst",
+    "name": "Supply Chain & Logistics Analyst",
+    "category": "People & Operations",
+    "required_skills": [
+      "Inventory Optimization",
+      "Demand Forecasting",
+      "ERP Systems",
+      "Excel",
+      "Logistics Modeling",
+      "Vendor Management",
+      "Data Analysis"
+    ],
+    "critical_skills": [
+      "Inventory Optimization",
+      "Demand Forecasting",
+      "ERP Systems"
+    ],
+    "related_skills": {
+      "ERP Systems": ["SAP", "Oracle SCM"],
+      "Demand Forecasting": ["Predictive Analytics", "Statistics"]
+    }
+  },
+  {
+    "id": "healthcare-analyst",
+    "name": "Healthcare Data Coordinator",
+    "category": "Healthcare & Life Sciences",
+    "required_skills": [
+      "Healthcare Analytics",
+      "SQL",
+      "Electronic Health Records (EHR)",
+      "Biostatistics",
+      "HIPAA Compliance",
+      "Excel",
+      "Data Privacy"
+    ],
+    "critical_skills": [
+      "Healthcare Analytics",
+      "HIPAA Compliance",
+      "SQL"
+    ],
+    "related_skills": {
+      "Healthcare Analytics": ["Clinical Data", "Epidemiology"],
+      "SQL": ["Health Informatics"]
     }
   },
   {
     "id": "python-dev",
-    "name": "Python Developer Intern",
+    "name": "Python Developer",
+    "category": "Technology & AI",
     "required_skills": [
       "Python",
-      "Git",
-      "REST APIs",
       "FastAPI",
+      "REST APIs",
+      "Git",
       "SQL",
-      "Debugging",
+      "Docker",
       "Testing"
     ],
     "critical_skills": [
       "Python",
-      "Git"
-    ],
-    "related_skills": {
-      "FastAPI": [
-        "REST APIs"
-      ],
-      "SQL": [
-        "PostgreSQL"
-      ]
-    }
-  },
-  {
-    "id": "ai-engineer",
-    "name": "AI Engineer Intern",
-    "required_skills": [
-      "Python",
-      "Machine Learning",
-      "Deep Learning",
-      "NumPy",
-      "PyTorch",
-      "Git",
       "REST APIs"
     ],
-    "critical_skills": [
-      "Python",
-      "Machine Learning"
-    ],
     "related_skills": {
-      "PyTorch": [
-        "Deep Learning"
-      ],
-      "NumPy": [
-        "Python"
-      ]
+      "FastAPI": ["Flask", "Django"],
+      "SQL": ["PostgreSQL", "Database Design"]
     }
   },
   {
     "id": "web-dev",
-    "name": "Web Developer Intern",
+    "name": "Full Stack Web Developer",
+    "category": "Technology & AI",
     "required_skills": [
       "HTML",
       "CSS",
       "JavaScript",
       "React",
+      "TypeScript",
       "Git",
       "REST APIs"
     ],
     "critical_skills": [
-      "HTML",
-      "JavaScript"
+      "JavaScript",
+      "React",
+      "HTML"
     ],
     "related_skills": {
-      "React": [
-        "JavaScript"
-      ]
+      "React": ["Vue", "Next.js", "Front-end"],
+      "JavaScript": ["TypeScript"]
     }
   },
   {
     "id": "software-dev",
-    "name": "Software Developer Intern",
+    "name": "Software Engineer",
+    "category": "Technology & AI",
     "required_skills": [
       "Python",
       "Data Structures",
       "Algorithms",
       "Git",
       "SQL",
+      "System Design",
       "Testing"
     ],
     "critical_skills": [
@@ -168,9 +414,8 @@
       "Algorithms"
     ],
     "related_skills": {
-      "Python": [
-        "Data Structures"
-      ]
+      "Python": ["Java", "C++"],
+      "Data Structures": ["Problem Solving", "LeetCode"]
     }
   }
 ]
